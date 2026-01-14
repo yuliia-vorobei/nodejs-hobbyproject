@@ -1,0 +1,53 @@
+# openapi: 3.1.0
+# info:
+#   version: 1.0.0
+#   title: Hobby project
+#   license:
+#     name: Apache 2.0
+#     url: http://www.apache.org/licenses/LICENSE-2.0.html
+#   description:
+#     This is a documentation of a future hobby project
+# tags:
+#   - name: Auth
+#     description: Auth operations.
+# servers:
+#   - url: http://localhost:3000
+#   - url: https://example.com/api/v1
+# paths:
+#   /students:
+#     post:
+#       $ref: ../swagger/path/auth/signin/post.yaml
+# components:
+#   securitySchemes:
+#     bearerAuth:
+#       type: http
+#       scheme: bearer
+
+
+# /docs/openapi.yaml
+
+openapi: 3.1.0
+info:
+  version: 1.0.0
+  title: Hobby project
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  description:
+    This is a documentation of a hobby project
+tags:
+  - name: Auth
+    description: Auth operations.
+servers:
+  - url: http://localhost:3000
+  - url: https://example.com/api/v1
+paths:
+  /auth:
+    post:
+      $ref: ../swagger/path/auth/signin/post.yaml
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+
